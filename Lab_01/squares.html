@@ -2,35 +2,15 @@
 <html lang="pl">
   <head>
     <style>
-      .Square1 {
-        height: 100px;
+      .square {
         width: 100px;
-        background-color: red;
-        box-sizing: border-box;
+        height: 100px;
+        margin: 10px;
       }
-      .Square2 {
-        height: 100px;
-        width: 100px;
-        background-color: green;
-        box-sizing: border-box;
-      }
-      .Square3 {
-        height: 100px;
-        width: 100px;
-        background-color: blue;
-        box-sizing: border-box;
-      }
-      .Square4 {
-        height: 100px;
-        width: 100px;
-        background-color: yellow;
-        box-sizing: border-box;
-      }
-      .Square5 {
-        height: 100px;
-        width: 100px;
-        background-color: black;
-        box-sizing: border-box;
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px;
       }
     </style>
     <meta name="vievport" content="width=device_width, initial scale=1.0" />
@@ -39,10 +19,12 @@
     <title>Kolorowe kwadraty</title>
   </head>
   <body>
-    <div class="Square1"></div>
-    <div class="Square2"></div>
-    <div class="Square3"></div>
-    <div class="Square4"></div>
-    <div class="Square5"></div>
+    <div class="container">
+      <div class="square" style="background-color: red"></div>
+      <div class="square" style="background-color: green"></div>
+      <div class="square" style="background-color: blue"></div>
+      <div class="square" style="background-color: yellow"></div>
+      <div class="square" style="background-color: black"></div>
+    </div>
   </body>
 </html>
