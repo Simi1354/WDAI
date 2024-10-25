@@ -1,0 +1,90 @@
+.heading {
+  height: 50px;
+  margin: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1cm;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+.rectangle {
+  width: 33%;
+  height: 50px;
+  margin: 5px;
+  border: 1;
+  /* background-color: rgb(228, 228, 18); */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  float: left;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+body {
+  background-image: url(anor_londo.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.text_left {
+  width: 50%;
+  height: 400px;
+  float: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: xx-large;
+  color: rgb(0, 0, 0);
+}
+
+.text_left_main {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  color: white;
+  height: 600px;
+  width: 400px;
+  text-align: left;
+  display: flex;
+  text-wrap: wrap;
+}
+
+.pic_left {
+  background-image: url(dark_souls3.png);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: contain;
+  width: 50%;
+  height: 400px;
+  float: left;
+}
+
+footer {
+  /* background-color: rgb(127, 123, 123); */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  /* color: rgb(199, 195, 195);
+  border-top: 3px solid rgb(199, 195, 195); */
+  color: white;
+  border-top: 3px solid white;
+  font-size: x-large;
+  font-weight: bold;
+}
