@@ -28,7 +28,7 @@ image {
   justify-content: center;
   display: flex;
   font-family: "EB Garamond", serif;
-  font-size: 1cm;
+  font-size: 1.1cm;
   font-weight: normal;
   color: black;
 }
@@ -88,26 +88,27 @@ image {
 .pic_left {
   background-repeat: no-repeat;
   background-attachment: local;
-  background-size: contain;
+  background-size: auto;
   max-width: 60%;
   width: 920px;
-  height: 515px;
+  height: 540px;
   float: left;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flexbox;
+  border: 3px solid black;
 }
 
 .boss_info {
   background-color: rgba(121, 121, 116, 0.6);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: black;
-  max-width: 40%;
-  width: 540px;
-  height: 515px;
+  max-width: 540px;
+  width: auto;
+  height: 540px;
   float: left;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 20px;
   border: 3px solid black;
   display: flexbox;
 }
