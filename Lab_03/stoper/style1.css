@@ -18,7 +18,7 @@ button:active {
 
 #display {
   font-size: large;
-  width: 240px;
+  width: 100px;
   height: 25px;
   border: 3px solid black;
   margin: 5px;

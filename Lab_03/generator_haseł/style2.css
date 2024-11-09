@@ -1,0 +1,17 @@
+button {
+  height: auto;
+  width: auto;
+  border: 3px solid black;
+  margin: 5px;
+  font-size: large;
+  padding: 5px;
+}
+
+button:hover {
+  color: white;
+  background-color: black;
+}
+
+button:active {
+  border: 3px solid gray;
+}

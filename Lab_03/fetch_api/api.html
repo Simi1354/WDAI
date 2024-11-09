@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta name="viewport" content="width=device_width, initial_scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style3.css" />
+    <script src="script3.js" defer></script>
+    <title>Fetching data from API</title>
+  </head>
+  <body>
+    <h1>Lista Produktów</h1>
+
+    <label for="filter">Filtruj produkty:</label>
+    <input type="text" id="filter" placeholder="Wpisz frazę do wyszukiwania" />
+
+    <label for="sortSelect">Sortowanie:</label>
+    <select id="sortSelect">
+      <option value="original">Oryginalna kolejność</option>
+      <option value="ascending">Rosnąco</option>
+      <option value="descending">Malejąco</option>
+    </select>
+
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Zdjęcie</th>
+          <th>Tytuł</th>
+          <th>Opis</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>

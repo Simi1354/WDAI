@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 3px solid black;
+  text-align: center;
+  background-color: lightgray;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+#filter {
+  width: 200px;
+}
