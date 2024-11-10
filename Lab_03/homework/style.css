@@ -44,12 +44,3 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.zombie {
-  display: block;
-  float: left;
-  position: inherit;
-  width: 100px;
-  height: 200px;
-  background-color: aqua;
-}
