@@ -18,7 +18,7 @@ body {
   background-attachment: local;
   background-position-y: -20vh;
   height: 120vh;
-  width: 100vw;
+  width: 99vw;
   overflow: hidden;
 }
 
@@ -43,11 +43,6 @@ body {
   font-weight: bold;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-button {
-  height: 50px;
-  width: 100px;
 }
 
 .zombie {
