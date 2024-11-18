@@ -6,12 +6,57 @@ document.addEventListener("mousemove", (event) => {
 });
 
 const display_score = document.getElementById("display_score");
+const display = document.getElementById("display");
+const disp = document.getElementById("disp");
 let score = 100;
 let lives = 3;
-let difficulty = 5;
+let difficulty = 2.5;
 const zombies = [];
 let spawnInterval = 2000;
 let lastSpawnTime = 0;
+let active = false;
+let first_click = true;
+let last_click = false;
+
+const space = document.createElement("div");
+space.className = "displays";
+
+function easy() {
+  difficulty = 5;
+  active = true;
+  document.body.style.cursor = "none";
+  customCursor.style.visibility = "visible";
+  disp.removeChild(display);
+  disp.appendChild(space);
+  space.style.visibility = "hidden";
+  score = 100;
+  spawnInterval = 2000;
+  requestAnimationFrame(animate);
+}
+function medium() {
+  difficulty = 10;
+  active = true;
+  document.body.style.cursor = "none";
+  customCursor.style.visibility = "visible";
+  disp.removeChild(display);
+  disp.appendChild(space);
+  space.style.visibility = "hidden";
+  score = 50;
+  spawnInterval = 1000;
+  requestAnimationFrame(animate);
+}
+function hard() {
+  difficulty = 15;
+  active = true;
+  document.body.style.cursor = "none";
+  customCursor.style.visibility = "visible";
+  disp.removeChild(display);
+  disp.appendChild(space);
+  space.style.visibility = "hidden";
+  score = 25;
+  spawnInterval = 500;
+  requestAnimationFrame(animate);
+}
 
 function updateHearts() {
   for (let i = 1; i <= 3; i++) {
@@ -32,7 +77,27 @@ function loseHeart() {
   updateHearts();
 }
 
-function gameOver() {}
+function gameOver() {
+  space.style.visibility = "visible";
+  const over = document.createElement("div");
+  over.className = "text";
+  over.textContent = "GAME OVER!";
+  space.appendChild(over);
+  const again = document.createElement("button");
+  again.textContent = "PLAY AGAIN";
+  again.style.width = "570px";
+  again.style.fontSize = "40px";
+  again.style.paddingTop = "20px";
+  again.style.paddingLeft = "70px";
+  again.addEventListener("click", () => location.reload());
+  space.appendChild(again);
+  customCursor.style.visibility = "hidden";
+  document.body.style.cursor = "auto";
+  last_click = true;
+  const audio = new Audio("images/sad-music.mp3");
+  audio.loop = true;
+  audio.play();
+}
 
 function updateZombie(i) {
   if (score > 0) {
@@ -43,9 +108,12 @@ function updateZombie(i) {
 }
 
 function updateBody() {
-  if (score > 0) {
+  if (score > 0 && active && !first_click && !last_click) {
     score -= 5;
     shot = true;
+  }
+  if (first_click) {
+    first_click = !first_click;
   }
   display_score.textContent = `${String(score).padStart(5, "0")}`;
 }
@@ -65,7 +133,7 @@ class Sprite {
     };
     this.image.src = imageSrc;
     this.currentFrame = 0;
-    this.frameBuffer = Math.floor(Math.random() * 5 + difficulty);
+    this.frameBuffer = 10;
     this.elapsedFrames = 0;
   }
   draw() {
@@ -117,7 +185,7 @@ class Zombie extends Sprite {
       width: width1,
       height: Math.floor((width1 / 200) * 312),
     };
-    this.velocity = 10 - this.frameBuffer;
+    this.velocity = Math.floor(Math.random() * (difficulty - 2) + 2);
   }
   update() {
     this.updateFrames();
@@ -177,7 +245,6 @@ canvas.addEventListener("click", (e) => {
   }
 });
 
-requestAnimationFrame(animate);
 document.addEventListener(
   "DOMContentLoaded",
   updateHearts,

@@ -8,15 +8,21 @@
     <title>Zombie shooter</title>
   </head>
   <body style="background-image: url(images/board-bg.jpg)">
-    <div
-      style="width: 100%; height: 20vh; display: block; margin-bottom: 280px"
-    >
+    <div style="width: 100%; height: 20vh; display: block; margin-bottom: 40px">
       <div class="hearts">
         <img src="images/full_heart.png" class="heart" id="heart1" />
         <img src="images/full_heart.png" class="heart" id="heart2" />
         <img src="images/full_heart.png" class="heart" id="heart3" />
       </div>
       <div id="display_score"></div>
+    </div>
+    <div id="disp">
+      <div class="displays" id="display">
+        <div class="text">CHOOSE DIFFICULTY</div>
+        <button style="padding-left: 44px" onclick="easy()">EASY</button>
+        <button onclick="medium()">MEDIUM</button>
+        <button style="padding-left: 44px" onclick="hard()">HARD</button>
+      </div>
     </div>
     <canvas id="canvas"></canvas>
     <div id="custom-cursor"></div>
